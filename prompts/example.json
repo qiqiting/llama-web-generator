@@ -4,4 +4,5 @@
         "max_length": 1000,
         "top_p": 0.7,
         "min_p": 0.0,
-        "top_
+        "top_k": 20,
+ 
