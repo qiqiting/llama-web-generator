@@ -6,4 +6,4 @@
         "min_p": 0.0,
         "top_k": 20,
         "temperature": 0.44,
-        "repeti
+        "repetition_pe
