@@ -6,4 +6,5 @@
         "min_p": 0.0,
         "top_k": 20,
         "temperature": 0.44,
-        "repetition_penalty_max": 
+        "repetition_penalty_max": 1.2,
+  
