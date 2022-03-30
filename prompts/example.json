@@ -8,4 +8,4 @@
         "temperature": 0.44,
         "repetition_penalty_max": 1.2,
         "repetition_penalty_sustain": 128,
-        "repetition_penalty_de
+        "repetition_penalty_decay": 
