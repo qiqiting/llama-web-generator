@@ -11,4 +11,5 @@
         "repetition_penalty_decay": 256,
         "max_new_tokens": 200,
         "beams": 1,
-        "beam_lengt
+        "beam_length": 1
+    },
