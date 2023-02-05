@@ -49,4 +49,4 @@
         ]
     },
     "promptTemplate": {
-        "prompt": "@{cha
+        "prompt": "@{charName}'s 
