@@ -49,4 +49,4 @@
         ]
     },
     "promptTemplate": {
-        "prompt": "@{charName}'s Persona: @{persona} \n @{
+        "prompt": "@{charName}'s Persona: @{persona} \n @{instruc
