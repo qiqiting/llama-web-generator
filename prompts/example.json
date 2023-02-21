@@ -49,4 +49,5 @@
         ]
     },
     "promptTemplate": {
-        "prompt": "@{charName}'s Persona: @{persona} \n @{instructions} \n\n<START> \n${chatExample}${c
+        "prompt": "@{charName}'s Persona: @{persona} \n @{instructions} \n\n<START> \n${chatExample}${chat}",
+ 
