@@ -51,4 +51,4 @@
     "promptTemplate": {
         "prompt": "@{charName}'s Persona: @{persona} \n @{instructions} \n\n<START> \n${chatExample}${chat}",
         "character": "@{charName}: ${message} \n",
-        "user
+        "user": "
