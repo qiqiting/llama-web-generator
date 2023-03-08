@@ -52,4 +52,5 @@
         "prompt": "@{charName}'s Persona: @{persona} \n @{instructions} \n\n<START> \n${chatExample}${chat}",
         "character": "@{charName}: ${message} \n",
         "user": "&{userName}: ${message} \n"
+    },
   
