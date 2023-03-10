@@ -53,4 +53,5 @@
         "character": "@{charName}: ${message} \n",
         "user": "&{userName}: ${message} \n"
     },
-    "chatHistory"
+    "chatHistory": []
+}
