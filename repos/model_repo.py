@@ -18,3 +18,8 @@ characterDictTarget = "@"
 class ModelType(Enum):
     SAFETENSORS = "safetensors"
     PT = "pt"
+
+
+class LlamaModel(dict):
+    path = str
+    modelFile = str
