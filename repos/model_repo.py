@@ -23,3 +23,7 @@ class ModelType(Enum):
 class LlamaModel(dict):
     path = str
     modelFile = str
+    ModelType = ModelType
+
+    def __init__(self, path: str, modelFile: str):
+        dict.__init__(self, path=path, modelFile=modelFile)
