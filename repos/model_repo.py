@@ -52,3 +52,11 @@ class LlamaModelRepo:
                 models.append(LlamaModel(path, filename))
                 print(path, flush=True)
         return models
+
+    def findModels(self):
+        for filename in os.listdir(self.modelsDir):
+            path = self.modelsDir + "/" + filename
+            if (os.path.isdir(path)):
+                self.models.extend(self.getModelsFromSubDir(path))
+
+    def loadModel(self, llamaModel: LlamaModel):
