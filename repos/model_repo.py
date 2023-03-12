@@ -27,3 +27,9 @@ class LlamaModel(dict):
 
     def __init__(self, path: str, modelFile: str):
         dict.__init__(self, path=path, modelFile=modelFile)
+        self.path = path
+        self.modelFile = modelFile
+        self.modelType = ModelType(modelFile[modelFile.rfind(".") + 1:])
+
+
+class LlamaModelRepo:
