@@ -33,3 +33,12 @@ class LlamaModel(dict):
 
 
 class LlamaModelRepo:
+    tokenizer: ExLlamaTokenizer = None
+    generator: ExLlamaGenerator = None
+    config: ExLlamaConfig = None
+    model: ExLlama = None
+    cache: ExLlamaCache = None
+
+    def __init__(self):
+        self.models: list = []
+        self.modelsDir: str = './models'
