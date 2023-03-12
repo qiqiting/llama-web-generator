@@ -42,3 +42,13 @@ class LlamaModelRepo:
     def __init__(self):
         self.models: list = []
         self.modelsDir: str = './models'
+
+    def getModelsFromSubDir(self, path: str):
+        models: list = []
+        for filename in os.listdir(path):
+            print(filename)
+            if filename[filename.rfind(".") + 1:] in [e.value for e in ModelType]:
+
+                models.append(LlamaModel(path, filename))
+                print(path, flush=True)
+        return models
