@@ -82,3 +82,11 @@ class LlamaModelRepo:
         self.config.model_path = modelPath
         self.model = ExLlama(self.config)
         self.cache = ExLlamaCache(self.model)
+        self.tokenizer = ExLlamaTokenizer(tokenizerModelPath)
+        self.generator = ExLlamaGenerator(
+            self.model, self.tokenizer, self.cache)
+
+    def getTokens(self, text: str):
+        return self.tokenizer.encode(text=text)
+
+    def chat(self, text: str, params: dict = {}):
