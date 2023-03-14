@@ -68,3 +68,17 @@ class LlamaModelRepo:
         modelPath = llamaModel.path + "/" + llamaModel.modelFile
         if (not exists(modelPath)):
             errors.append(f"{modelPath} does not exist")
+
+        tokenizerModelPath = llamaModel.path + "/tokenizer.model"
+        if (not exists(tokenizerModelPath)):
+            errors.append(f"{tokenizerModelPath} does not exist")
+
+        if errors:
+            raise Exception("\n".join(errors))
+
+        torch.set_grad_enabled(False)
+        torch.cuda._lazy_init()
+        self.config = ExLlamaConfig(configPath)
+        self.config.model_path = modelPath
+        self.model = ExLlama(self.config)
+        self.cache = ExLlamaCache(self.model)
