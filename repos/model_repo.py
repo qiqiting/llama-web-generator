@@ -60,3 +60,11 @@ class LlamaModelRepo:
                 self.models.extend(self.getModelsFromSubDir(path))
 
     def loadModel(self, llamaModel: LlamaModel):
+        errors = []
+        configPath = llamaModel.path + "/config.json"
+        if (not exists(configPath)):
+            errors.append(f"{configPath} does not exist")
+
+        modelPath = llamaModel.path + "/" + llamaModel.modelFile
+        if (not exists(modelPath)):
+            errors.append(f"{modelPath} does not exist")
