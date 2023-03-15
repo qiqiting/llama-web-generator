@@ -90,3 +90,8 @@ class LlamaModelRepo:
         return self.tokenizer.encode(text=text)
 
     def chat(self, text: str, params: dict = {}):
+        self.generator.settings.top_p = params.get("top_p", 0.65)
+        self.generator.settings.top_k = params.get("top_k", 20)
+        self.generator.settings.temperature = params.get("temperature", 0.44)
+        self.generator.settings.token_repetition_penalty_max = params.get(
+            "token_repetition_penalty_max", 1.15)
