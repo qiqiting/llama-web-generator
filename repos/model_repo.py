@@ -110,3 +110,9 @@ class LlamaModelRepo:
             text = self.generator.generate_simple(
                 text, max_new_tokens=params.get("max_new_tokens", 2000))
         return text
+
+    # Replaces token in a string such as replaceToken{charName} with value in the targetDict
+
+    def replaceTokensInString(self, string: str,  targetDict: dict, replaceToken: str):
+        jsonKeys = re.findall(replaceToken + "{([aA-zZ]*)}", string)
+        for key in jsonKeys:
