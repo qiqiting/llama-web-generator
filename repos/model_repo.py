@@ -95,3 +95,9 @@ class LlamaModelRepo:
         self.generator.settings.temperature = params.get("temperature", 0.44)
         self.generator.settings.token_repetition_penalty_max = params.get(
             "token_repetition_penalty_max", 1.15)
+        self.generator.settings.token_repetition_penalty_sustain = params.get(
+            "token_repetition_penalty_sustain", 256)
+        self.generator.settings.token_repetition_penalty_decay = params.get(
+            "token_repetition_penalty_decay", 128)
+        self.generator.settings.min_p = params.get(
+            "min_p", 0.0)
