@@ -101,3 +101,12 @@ class LlamaModelRepo:
             "token_repetition_penalty_decay", 128)
         self.generator.settings.min_p = params.get(
             "min_p", 0.0)
+        self.generator.settings.beams = params.get(
+            "beams", 1)
+        self.generator.settings.beam_length = params.get(
+            "beam_length", 1)
+        print(self.generator.settings.token_repetition_penalty_max)
+        with torch.no_grad():
+            text = self.generator.generate_simple(
+                text, max_new_tokens=params.get("max_new_tokens", 2000))
+        return text
