@@ -116,3 +116,9 @@ class LlamaModelRepo:
     def replaceTokensInString(self, string: str,  targetDict: dict, replaceToken: str):
         jsonKeys = re.findall(replaceToken + "{([aA-zZ]*)}", string)
         for key in jsonKeys:
+            if key in targetDict:
+                replacement = "[" + ",".join(targetDict[key]) + "]" if isinstance(
+                    targetDict[key], list) else targetDict[key]
+                string = string.replace(
+                    f"{replaceToken}{{{key}}}", replacement)
+            else:
