@@ -127,3 +127,8 @@ class LlamaModelRepo:
         jsonKeys = re.findall(replaceToken + "{([aA-zZ]*)}", string)
         if jsonKeys:
             return self.replaceTokensInString(string=string, targetDict=targetDict, replaceToken=replaceToken)
+        return string
+
+    # Replaces characters token in a string such as @{charName} with charName in the character map
+    def replaceCharacterTokensInString(self, string: str, chatJSON: dict):
+        return self.replaceTokensInString(string=string, replaceToken=characterDictTarget, targetDict=chatJSON["character"],)
