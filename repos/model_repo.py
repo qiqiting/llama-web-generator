@@ -132,3 +132,13 @@ class LlamaModelRepo:
     # Replaces characters token in a string such as @{charName} with charName in the character map
     def replaceCharacterTokensInString(self, string: str, chatJSON: dict):
         return self.replaceTokensInString(string=string, replaceToken=characterDictTarget, targetDict=chatJSON["character"],)
+
+    # Replaces main token in a string such as &{userName} with userName in the main json blob
+    def replaceMainTokensInString(self, string: str, chatJSON: dict):
+        return self.replaceTokensInString(string=string, replaceToken=mainDictTarget, targetDict=chatJSON)
+
+    def buildMessage(self, chatJSON: dict, message: dict):
+
+        # Try catch this and thow an exception then return error http response
+        messageStr = chatJSON["promptTemplate"].get(message["chatType"], "")
+        # Replace tokens from main json blob such as the userName
