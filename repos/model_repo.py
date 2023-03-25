@@ -142,3 +142,13 @@ class LlamaModelRepo:
         # Try catch this and thow an exception then return error http response
         messageStr = chatJSON["promptTemplate"].get(message["chatType"], "")
         # Replace tokens from main json blob such as the userName
+        messageStr = self.replaceCharacterTokensInString(
+            string=messageStr, chatJSON=chatJSON)
+        # Replace tokens from character json blob such as the userName
+        messageStr = self.replaceMainTokensInString(
+            string=messageStr, chatJSON=chatJSON)
+
+        return messageStr.replace("${message}", message["message"])
+
+    def buildMessagesUntilMaxTokenCount(self, messages: list,  chatJSON: dict, currentTokenCount: int = 0,):
+        maxTokens = self.config.max_seq_len
