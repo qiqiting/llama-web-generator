@@ -152,3 +152,11 @@ class LlamaModelRepo:
 
     def buildMessagesUntilMaxTokenCount(self, messages: list,  chatJSON: dict, currentTokenCount: int = 0,):
         maxTokens = self.config.max_seq_len
+        wantedNewTokens = chatJSON["genParams"].get("max_new_tokens", 512)
+
+        messageStrings = []
+        while messages:
+            messageString = self.buildMessage(
+                message=messages.pop(), chatJSON=chatJSON)
+            currentTokenCount += len(self.getTokens(messageString)[0])
+            if (currentTokenCount <= (maxTokens - wantedNewTokens)):
