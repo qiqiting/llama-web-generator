@@ -169,3 +169,10 @@ class LlamaModelRepo:
         return messageStrings
 
     def buildPrompt(self, chatJSON: dict):
+        prompt = self.replaceCharacterTokensInString(
+            string=chatJSON["promptTemplate"]["prompt"],  chatJSON=chatJSON)
+
+        tokenCount = len(self.getTokens(prompt)[0])
+
+        print(f"Token after building prompt = {tokenCount}")
+        chatExampleStrings = self.buildMessagesUntilMaxTokenCount(messages=chatJSON["character"].get(
