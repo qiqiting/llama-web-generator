@@ -160,3 +160,12 @@ class LlamaModelRepo:
                 message=messages.pop(), chatJSON=chatJSON)
             currentTokenCount += len(self.getTokens(messageString)[0])
             if (currentTokenCount <= (maxTokens - wantedNewTokens)):
+                print(f"Added Message token count is: {currentTokenCount}")
+                messageStrings.append(messageString)
+            else:
+                print(
+                    f"Token count hit breaking count: ${currentTokenCount}, max: ${maxTokens}, wantedTokens: ${wantedNewTokens}")
+                break
+        return messageStrings
+
+    def buildPrompt(self, chatJSON: dict):
