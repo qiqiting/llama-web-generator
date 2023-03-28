@@ -185,3 +185,8 @@ class LlamaModelRepo:
         print(f"Token after building example = {tokenCount}")
 
         chatHistoryStrings = self.buildMessagesUntilMaxTokenCount(messages=chatJSON.get(
+            "chatHistory", []), chatJSON=chatJSON, currentTokenCount=tokenCount)
+        chatHistoryStrings.reverse()
+        prompt = prompt.replace("${chat}", ''.join(chatHistoryStrings))
+
+        return prompt + chatJSON["character"]["charName"] + ":"
