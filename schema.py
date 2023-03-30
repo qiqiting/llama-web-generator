@@ -22,3 +22,14 @@ chatSchema = {
                     "type": "number"
                 },
                 "top_k": {
+                    "type": "number"
+                },
+                "temperature": {
+                    "type": "number"
+                },
+                "token_repetition_penalty_max": {
+                    "type": "number"
+                },
+                "token_repetition_penalty_sustain": {
+                    "type": "integer"
+                },
