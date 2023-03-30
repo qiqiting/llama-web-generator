@@ -7,3 +7,9 @@ chatSchema = {
             "type": "string"
         },
         "genParams": {
+            "type": "object",
+            "properties": {
+                "min_length": {
+                    "type": "integer"
+                },
+                "max_length": {
