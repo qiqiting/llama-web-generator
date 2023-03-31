@@ -40,3 +40,10 @@ chatSchema = {
                     "type": "integer"
                 },
                 "beams": {
+                    "type": "integer"
+                },
+                "beam_length": {
+                    "type": "integer"
+                }
+            },
+            "required": [
