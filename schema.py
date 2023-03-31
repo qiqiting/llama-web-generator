@@ -33,3 +33,10 @@ chatSchema = {
                 "token_repetition_penalty_sustain": {
                     "type": "integer"
                 },
+                "token_repetition_penalty_decay": {
+                    "type": "integer"
+                },
+                "max_new_tokens": {
+                    "type": "integer"
+                },
+                "beams": {
