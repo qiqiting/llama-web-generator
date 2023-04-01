@@ -67,3 +67,6 @@ chatSchema = {
                     "items":
                     {
                         "type": "string"
+                    },
+
+                },
