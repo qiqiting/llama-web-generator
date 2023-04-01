@@ -52,3 +52,8 @@ chatSchema = {
         },
         "character": {
             "type": "object",
+            "properties": {
+                "charName": {
+                    "type": "string"
+                },
+                "persona": {
