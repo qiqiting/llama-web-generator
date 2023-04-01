@@ -57,3 +57,13 @@ chatSchema = {
                     "type": "string"
                 },
                 "persona": {
+                    "type": "string"
+                },
+                "greeting": {
+                    "type": "string"
+                },
+                "emotions": {
+                    "type": "array",
+                    "items":
+                    {
+                        "type": "string"
