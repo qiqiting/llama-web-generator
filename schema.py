@@ -47,3 +47,8 @@ chatSchema = {
                 }
             },
             "required": [
+                "max_new_tokens"
+            ]
+        },
+        "character": {
+            "type": "object",
