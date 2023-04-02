@@ -70,3 +70,8 @@ chatSchema = {
                     },
 
                 },
+                "chatExample": {
+                    "type": "array",
+                    "items":
+
+
