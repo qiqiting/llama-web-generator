@@ -88,3 +88,9 @@ chatSchema = {
                         },
                         "required": [
                             "chatType",
+                            "message"
+                        ]
+                    }
+
+                }
+            },
