@@ -75,3 +75,12 @@ chatSchema = {
                     "items":
 
 
+
+                    {
+                        "type": "object",
+                        "properties": {
+                            "chatType": {
+                                "type": "string"
+                            },
+                            "message": {
+                                "type": "string"
