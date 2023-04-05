@@ -117,3 +117,11 @@ chatSchema = {
             "required": [
                 "prompt",
                 "character",
+                "user"
+            ]
+        },
+        "chatHistory": {
+            "type": "array",
+            "items": {}
+        }
+    },
