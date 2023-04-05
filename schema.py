@@ -110,3 +110,10 @@ chatSchema = {
                 "character": {
                     "type": "string"
                 },
+                "user": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "prompt",
+                "character",
