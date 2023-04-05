@@ -94,3 +94,8 @@ chatSchema = {
 
                 }
             },
+            "required": [
+                "charName",
+                "persona",
+                "greeting",
+                "chatExample"
