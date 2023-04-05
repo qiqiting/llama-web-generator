@@ -99,3 +99,14 @@ chatSchema = {
                 "persona",
                 "greeting",
                 "chatExample"
+            ]
+        },
+        "promptTemplate": {
+            "type": "object",
+            "properties": {
+                "prompt": {
+                    "type": "string"
+                },
+                "character": {
+                    "type": "string"
+                },
