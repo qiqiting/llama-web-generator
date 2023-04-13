@@ -130,3 +130,6 @@ chatSchema = {
         "genParams",
         "character",
         "promptTemplate",
+        "chatHistory"
+    ]
+}
