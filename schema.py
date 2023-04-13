@@ -125,3 +125,8 @@ chatSchema = {
             "items": {}
         }
     },
+    "required": [
+        "userName",
+        "genParams",
+        "character",
+        "promptTemplate",
