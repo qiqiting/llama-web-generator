@@ -20,3 +20,9 @@ emotionsPromptTemplate = {
     "genParams": {
         "max_length": 1000,
         "top_p": 0.7,
+        "temperature": 0.44,
+        "repetition_penalty": 1.6,
+        "max_new_tokens": 5
+    },
+    "character": {
+        "charName": "EmotionEngine",
