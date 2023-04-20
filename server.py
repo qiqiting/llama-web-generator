@@ -38,3 +38,7 @@ emotionsPromptTemplate = {
                 "message": "*I gesture her to come in* Hello welcome your room will be upstairs on the left side"
             },
             {
+                "chatType": "user1",
+                "message": "N-nice to meet you. Th-thank you for taking me in"
+            },
+            {
