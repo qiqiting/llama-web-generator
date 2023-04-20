@@ -32,3 +32,9 @@ emotionsPromptTemplate = {
             {
                 "chatType": "user1",
                 "message": "H-hi My name is Braixen! I'm going to be moving in with you today I-i hope we can get along"
+            },
+            {
+                "chatType": "user2",
+                "message": "*I gesture her to come in* Hello welcome your room will be upstairs on the left side"
+            },
+            {
