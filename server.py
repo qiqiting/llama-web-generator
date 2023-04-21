@@ -47,3 +47,9 @@ emotionsPromptTemplate = {
             },
             {
                 "chatType": "user1",
+                "message": "*Braixen wags her tail* Okay thankyou. Th-thankyou for everything"
+            },
+            {
+                "chatType": "user2",
+                "message": "God youre so hot cutie"
+            },
