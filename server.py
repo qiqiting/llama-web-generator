@@ -42,3 +42,8 @@ emotionsPromptTemplate = {
                 "message": "N-nice to meet you. Th-thank you for taking me in"
             },
             {
+                "chatType": "system",
+                "message": "happy"
+            },
+            {
+                "chatType": "user1",
