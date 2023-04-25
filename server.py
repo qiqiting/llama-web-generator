@@ -53,3 +53,8 @@ emotionsPromptTemplate = {
                 "chatType": "user2",
                 "message": "God youre so hot cutie"
             },
+            {
+                "chatType": "user1",
+                "message": "*braixen turns around and barks at him* Dont call me that!"
+            },
+            {
