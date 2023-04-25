@@ -65,3 +65,9 @@ emotionsPromptTemplate = {
                 "chatType": "user1",
                 "message": "Okay sorry i will not say it again"
             },
+            {
+                "chatType": "user2",
+                "message": "Great, thankyou!"
+            },
+            {
+                "chatType": "system",
