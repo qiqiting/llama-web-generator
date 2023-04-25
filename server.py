@@ -58,3 +58,10 @@ emotionsPromptTemplate = {
                 "message": "*braixen turns around and barks at him* Dont call me that!"
             },
             {
+                "chatType": "system",
+                "message": "angry"
+            },
+            {
+                "chatType": "user1",
+                "message": "Okay sorry i will not say it again"
+            },
