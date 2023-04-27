@@ -71,3 +71,9 @@ emotionsPromptTemplate = {
             },
             {
                 "chatType": "system",
+                "message": "normal"
+            },
+        ]
+    },
+    "promptTemplate": {
+        "prompt": "@{persona} \n @{instructions} \n\n<START> \n ${chatExample}${chat}",
