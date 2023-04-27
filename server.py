@@ -77,3 +77,11 @@ emotionsPromptTemplate = {
     },
     "promptTemplate": {
         "prompt": "@{persona} \n @{instructions} \n\n<START> \n ${chatExample}${chat}",
+        "system": "@{charName}: ${message} \n",
+        "user1": "&{firstUser}: ${message} \n",
+        "user2": "&{secondUser}: ${message} \n",
+
+    },
+    "chatHistory": []
+
+}
