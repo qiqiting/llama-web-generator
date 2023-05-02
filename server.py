@@ -88,3 +88,7 @@ emotionsPromptTemplate = {
 
 
 @app.route('/models', methods=['GET'])
+def models():
+    modelRepo.findModels()
+    return {"models": modelRepo.models}
+
