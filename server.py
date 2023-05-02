@@ -85,3 +85,6 @@ emotionsPromptTemplate = {
     "chatHistory": []
 
 }
+
+
+@app.route('/models', methods=['GET'])
