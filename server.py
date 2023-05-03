@@ -100,3 +100,7 @@ def load_model():
         modelRepo.loadModel(LlamaModel(json['path'], json['modelFile']))
     except Exception as e:
         return str(e), 404
+    return "Model loaded", 200
+
+
+@app.route('/chat', methods=['POST'])
