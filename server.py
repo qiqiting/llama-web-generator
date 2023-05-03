@@ -110,3 +110,10 @@ def chat():
 
     print("Got chat hist ===============================================")
     print(respjson["chatHistory"])
+    print("==================================================================")
+
+    username = respjson["userName"]
+    charname = respjson["character"]["charName"]
+
+    prompt = modelRepo.buildPrompt(deepcopy(respjson))
+    print("Got Prompt ===============================================")
