@@ -92,3 +92,11 @@ def models():
     modelRepo.findModels()
     return {"models": modelRepo.models}
 
+
+@app.route('/models/load', methods=['POST'])
+def load_model():
+    json = request.get_json()
+    try:
+        modelRepo.loadModel(LlamaModel(json['path'], json['modelFile']))
+    except Exception as e:
+        return str(e), 404
