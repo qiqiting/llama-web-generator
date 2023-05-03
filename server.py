@@ -104,3 +104,9 @@ def load_model():
 
 
 @app.route('/chat', methods=['POST'])
+@expects_json(schema.chatSchema)
+def chat():
+    respjson = g.data
+
+    print("Got chat hist ===============================================")
+    print(respjson["chatHistory"])
