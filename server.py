@@ -117,3 +117,11 @@ def chat():
 
     prompt = modelRepo.buildPrompt(deepcopy(respjson))
     print("Got Prompt ===============================================")
+    print(prompt)
+    print("==================================================================")
+
+    chatOutput = modelRepo.chat(prompt, respjson["genParams"])
+    chatOutput = chatOutput.replace(prompt, "").split(f"{username}:")[0].replace(
+        f"{charname}:", "").replace("<s>", "").replace("</s>", "").replace("<END>", "").lstrip().rstrip()
+
+    print("Got Chat ===============================================")
