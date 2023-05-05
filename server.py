@@ -125,3 +125,11 @@ def chat():
         f"{charname}:", "").replace("<s>", "").replace("</s>", "").replace("<END>", "").lstrip().rstrip()
 
     print("Got Chat ===============================================")
+    print(chatOutput)
+    print("==================================================================")
+
+    emotion = None
+    responseDict = {"message": chatOutput}
+
+    if respjson["character"]["emotions"]:
+        print("Getting emotion for ===============================================")
