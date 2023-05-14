@@ -151,3 +151,7 @@ def chat():
             else:
                 message["chatType"] = "user2"
                 isFirst = True
+
+        emotionsPrompt["chatHistory"].append({
+            "chatType": "user2",
+            "message": chatOutput
