@@ -146,3 +146,8 @@ def chat():
         isFirst = True
         for message in reversed(emotionsPrompt["chatHistory"]):
             if isFirst:
+                message["chatType"] = "user1"
+                isFirst = False
+            else:
+                message["chatType"] = "user2"
+                isFirst = True
