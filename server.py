@@ -133,3 +133,10 @@ def chat():
 
     if respjson["character"]["emotions"]:
         print("Getting emotion for ===============================================")
+        print(respjson["character"]["emotions"])
+        print("==================================================================")
+
+        emotionsPrompt = deepcopy(emotionsPromptTemplate)
+        print("==================================================================")
+        print(emotionsPrompt)
+        print("==================================================================")
