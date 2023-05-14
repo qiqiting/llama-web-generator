@@ -140,3 +140,9 @@ def chat():
         print("==================================================================")
         print(emotionsPrompt)
         print("==================================================================")
+
+        emotionsPrompt["chatHistory"] = respjson["chatHistory"] if len(
+            respjson["chatHistory"]) < 5 else respjson["chatHistory"][-4:]
+        isFirst = True
+        for message in reversed(emotionsPrompt["chatHistory"]):
+            if isFirst:
