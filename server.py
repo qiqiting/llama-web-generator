@@ -155,3 +155,13 @@ def chat():
         emotionsPrompt["chatHistory"].append({
             "chatType": "user2",
             "message": chatOutput
+        })
+
+        emotionsPrompt["character"]["emotions"] = respjson["character"]["emotions"]
+        emotionPrompt = modelRepo.buildPrompt(emotionsPrompt)
+
+        print("Emotion prompt ===============================================")
+        print(emotionPrompt)
+        print("==================================================================")
+
+        emotion = modelRepo.chat(emotionPrompt).replace(emotionPrompt, "").replace(
