@@ -165,3 +165,10 @@ def chat():
         print("==================================================================")
 
         emotion = modelRepo.chat(emotionPrompt).replace(emotionPrompt, "").replace(
+            "<s>", "").replace("</s>", "").replace("<END>", "").lstrip().rstrip()
+
+        if emotion:
+            responseDict["emotion"] = emotion
+
+    print("Returning ===============================================")
+    print(responseDict)
