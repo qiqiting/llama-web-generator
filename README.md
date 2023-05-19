@@ -16,3 +16,11 @@
         },
     ]
 }
+```
+\n## Endpoint /models/load - POST\n\nPost JSON to this url to load a model 
+```
+{
+  "modelFile": "pyg7b-4bit-128g.safetensors",
+  "path": "./models/pygmalion-7b-4bit-128g-cuda"
+}
+```
