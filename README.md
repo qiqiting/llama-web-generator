@@ -7,3 +7,7 @@
             "path": "./models/vicuna-13B-1.1-GPTQ-4bit-128g"
         },
         {
+            "modelFile": "vicuna-13B-1.1-GPTQ-4bit-128g.compat.no-act-order.pt",
+            "path": "./models/vicuna-13B-1.1-GPTQ-4bit-128g"
+        },
+        {
