@@ -11,3 +11,8 @@
             "path": "./models/vicuna-13B-1.1-GPTQ-4bit-128g"
         },
         {
+            "modelFile": "pyg7b-4bit-128g.safetensors",
+            "path": "./models/pygmalion-7b-4bit-128g-cuda"
+        },
+    ]
+}
