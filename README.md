@@ -24,3 +24,10 @@
   "path": "./models/pygmalion-7b-4bit-128g-cuda"
 }
 ```
+\n\n## Endpoint /chat - POST\n\nPost JSON to this endpoint to generate text, a model must already be loaded as there's currently no error handling. A trimmed output will be returned which should only be the last message in the prompt. An example JSON file is in the prompts directory. If the JSON posted comprises a list of emotions in the character prompt, those will be used on a second text generation with a built-in prompt to generate an emotion based on the last few messages in the chat.\n\nThe chat endpoint can take your full list of messages in the chat history field the message chain is built by adding the messages from the characters chatExample and the chatHistory messages. The amount of messages added depends on the token limit of the model; it will add them until the token count is the (models max tokens - max_new_tokens) from the genParams\n\nResponse 
+```
+{
+    "emotion": "happy",
+    "message": "I'm doing great, thanks for asking! Just excited to share my love of Pokémon with everyone. How about you?"
+}
+```\n
